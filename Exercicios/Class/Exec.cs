@@ -110,6 +110,56 @@ namespace Exercicios.Class
 
         public static void Questao06()
         {
+            //int cont = 3;
+            //int anterior1 = 1;
+            //int anterior2 = 0;
+            //int aux;
+
+            //Console.Write($"{anterior2} - ");
+            //Console.Write($"{anterior1} - ");
+
+            //while (cont <= 100)
+            //{
+            //    Console.Write($"{anterior1 + anterior2} - ");
+            //    aux = anterior2;
+            //    anterior2 = anterior1;
+            //    anterior1 = anterior1 + aux;
+
+            //    cont++;
+            //}
+
+            var seq = new int[100];
+            int cont = 0;
+
+            while (cont < 100)
+            {
+                if(cont == 0 || cont == 1)
+                {
+                    seq[cont] = cont;
+                    cont++;
+                    continue;
+                }
+
+                seq[cont] = seq[cont - 2] + seq[cont - 1];
+
+                cont++;
+                    
+            }
+
+            foreach(var num in seq)
+            {
+                Console.WriteLine($"{num} - ");
+            }
+            
+        }
+
+        public static void Questao07()
+        {
+
+        }
+
+        public static void Questao08()
+        {
 
         }
     }

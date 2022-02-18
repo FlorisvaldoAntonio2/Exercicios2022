@@ -19,7 +19,9 @@ namespace Exercicios
 
             //Exec.Questao04(-11);
 
-            Exec.Questao05();
+            //Exec.Questao05();
+
+            //Exec.Questao06();
 
             Console.ReadKey();
         }
