@@ -280,5 +280,51 @@ namespace Exercicios.Class
 
             return resultado;
         }
+
+        public static void Questao14()
+        {
+
+        }
+
+        public static float Questao15(float grau)
+        {
+            return ((9  * grau + 160) / 5);
+        }
+        public static double Questao16(float raio, float altura)
+        {
+            if(raio < 0 || altura < 0)
+            {
+                throw new ArgumentException("O raio e a altura devem ser POSITIVOS!!!");
+            }
+            return 3.14159 * raio * raio * altura;
+        }
+
+        public static void Questao17(float ladoA, float ladoB, float ladoC)
+        {
+            if(ladoA < 0 || ladoB < 0 || ladoC < 0)
+            {
+                throw new ArgumentException("Os lados devem ser POSITIVOS!!!");
+            }
+
+            if(ladoA + ladoB >= ladoC && ladoA + ladoC >= ladoB && ladoB + ladoC >= ladoA)
+            {
+                if(ladoA == ladoB && ladoB == ladoC)
+                {
+                    Console.WriteLine("triângulo é eqüilátero");
+                }
+                else if(ladoA == ladoB || ladoA == ladoC || ladoB == ladoC)
+                {
+                    Console.WriteLine("triângulo é isósceles");
+                }
+                else
+                {
+                    Console.WriteLine("triângulo será escaleno");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Não é um triangulo");
+            }
+        }
     }
 }

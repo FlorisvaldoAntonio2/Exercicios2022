@@ -31,20 +31,28 @@ namespace Exercicios
 
                 //Exec.Questao09();
 
-                Exec.Questao10();
+                Exec.Questao10();//-->falta
 
                 //Exec.Questao11(45 , 450 , 450);
 
                 //Exec.Questao12();
 
-           
                 //Console.WriteLine(Exec.Questao13(-2));
+
+                Exec.Questao14(); //-->falta
+
+                //Console.WriteLine(Exec.Questao15(-20));
+
+                //Console.WriteLine($"O Volume da lata é de : {Exec.Questao16(1f , 10f)}");
+
+                //Exec.Questao17(1 , -1 , 1);
 
             }
             catch (ArgumentException ex)
             {
                 Console.WriteLine(ex.Message);
             }
+
 
             Console.ReadKey();
         }
