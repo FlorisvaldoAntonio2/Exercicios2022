@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace Exercicios.Class
 {
+    public enum Operacao
+    {
+        Soma,
+        Subtracao,
+        Multiplicacao,
+        Divisao
+    }
     public static class Exec
     {
         public static void Questao01(float nota1 , float nota2 , float nota3)
@@ -325,6 +332,48 @@ namespace Exercicios.Class
             {
                 Console.WriteLine("Não é um triangulo");
             }
+        }
+
+        public static string Questao18(int mes)
+        {
+            var Meses = new string[] 
+            {
+                "Janeiro",
+                "Fevereiro",
+                "Maio",
+                "Abril",
+                "Marco",
+                "Junho",
+                "Julho",
+                "Agosto",
+                "Setembro",
+                "Outubro",
+                "Novembro",
+                "Dezembro"
+            };
+
+            return Meses[mes - 1];
+         
+        }
+
+        public static int Questao19(int numero1, int numero2 , Operacao op)
+        {
+            int retorno = 0;
+
+            if(op == Operacao.Soma)
+                retorno = numero1 + numero2;
+
+            if (op == Operacao.Subtracao)
+                retorno = numero1 - numero2;
+
+            if (op == Operacao.Multiplicacao)
+                retorno = numero1 * numero2;
+
+            if (op == Operacao.Divisao)
+                retorno = numero1 / numero2;
+
+            return retorno;
+
         }
     }
 }

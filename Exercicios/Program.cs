@@ -47,6 +47,10 @@ namespace Exercicios
 
                 //Exec.Questao17(1 , -1 , 1);
 
+                //Console.WriteLine($"O mês escolhido é : {Exec.Questao18(1)}");
+
+                Console.WriteLine($"Total : {Exec.Questao19(10 , 2 , Operacao.Divisao )}");
+
             }
             catch (ArgumentException ex)
             {
