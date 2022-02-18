@@ -25,9 +25,13 @@ namespace Exercicios.Class
 
         public static void Questao02(int idade)
         {
-            if(idade < 5 || idade > 120)
+            if (idade < 0 || idade > 120)
             {
-                Console.WriteLine("Idade invalida!!!");
+                throw new ArgumentException("Idade invalida deve ser MAIOR que ZERO e menor que 120!!!");
+            }
+            else if(idade < 5)
+            {
+                Console.WriteLine("Sem Faixa!!!");
                 return;
             }
 
@@ -153,14 +157,128 @@ namespace Exercicios.Class
             
         }
 
-        public static void Questao07()
+        public static void Questao07(int numero)
         {
+            int fatorial = numero;
+            for (int cont = numero - 1; cont >= 1; cont--)
+            {
+                fatorial *= cont;
+            }
 
+            Console.WriteLine(fatorial);
         }
 
         public static void Questao08()
         {
+            //Exercicios 05
 
+            //int cont = 0;
+            //do
+            //{
+            //    if (cont % 2 == 0)
+            //    {
+            //        Console.WriteLine(cont);
+            //    }
+            //    cont++;
+            //} while (cont <= 100);
+
+            //Exercicios 06
+
+            var seq = new int[100];
+            int cont = 0;
+
+            do
+            {
+                if (cont == 0 || cont == 1)
+                {
+                    seq[cont] = cont;
+                    cont++;
+                    continue;
+                }
+
+                seq[cont] = seq[cont - 2] + seq[cont - 1];
+
+                cont++;
+
+            } while (cont < 100) ;
+
+            foreach (var num in seq)
+            {
+                Console.WriteLine($"{num} - ");
+            }
+        }
+
+        public static void Questao09()
+        {
+            int NumeroDivisiveis = 0;
+            for (int cont = 1; cont <= 150; cont++)
+            {
+                for(int num = cont; num >= 1; num--)
+                {
+                    if(cont % num == 0)
+                    {
+                        NumeroDivisiveis++;
+                    }
+                }
+
+                if(NumeroDivisiveis <= 2)
+                {
+                    Console.WriteLine(cont);
+                }
+                NumeroDivisiveis = 0;
+            }
+        }
+
+        public static void Questao10()
+        {
+
+        }
+
+        public static void Questao11(int valorA, int valorB, int valorC)
+        {
+            Console.WriteLine($"Valor A : {valorA} | Valor B : {valorB} | Valor C : {valorC}");
+            if (valorA >= valorB && valorA >= valorC)
+            {
+                Console.WriteLine($"O maior valor é : {valorA}.");
+            }
+            else if (valorB >= valorA && valorB >= valorC)
+            {
+                Console.WriteLine($"O maior valor é : {valorB}.");
+            }
+            else
+            {
+                Console.WriteLine($"O maior valor é : {valorC}.");
+            }
+        }
+
+        public static void Questao12()
+        {
+            for (int cont = 1; cont <= 10; cont++)
+            {
+                for(int t = 1; t <= 10; t++)
+                {
+                    Console.WriteLine($"{cont} X {t} = {cont * t}");
+                }
+
+                Console.WriteLine("-----------------------------");
+            }
+        }
+
+        public static double Questao13(int numero)
+        {
+            if(numero < 1)
+            {
+                throw new ArgumentException("Parametro invalido!! O Numero deve ser POSITIVO e diferente de ZERO!!");
+            }
+
+            double resultado = 1.00; // ou 1d 
+
+            for(int cont = 2; cont <= numero; cont++)
+            {
+                resultado += 1.00 / cont; // ou (double)1 / cont
+            }
+
+            return resultado;
         }
     }
 }
