@@ -57,7 +57,11 @@ namespace Exercicios
 
                 //Console.WriteLine(Exec.Questao22(new int[] {0 , -45 , -1 , 10}));
 
-                Console.WriteLine(Exec.Questao23(new int[] { 12 , 10, -45, -1, 10 , 10 } , 10));
+                //Console.WriteLine(Exec.Questao23(new int[] { 12 , 10, -45, -1, 10 , 10 } , 10));
+
+                //Helper.ExibirArray(Exec.Questao24(new int[] {10 , -1 , -4 , -7 , -1}));
+
+                Console.WriteLine(Exec.Questao26(new int[] {10 , 15 , 300 , 58 , 2940}));
             }
             catch (ArgumentException ex)
             {

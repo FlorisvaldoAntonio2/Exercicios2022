@@ -485,6 +485,44 @@ namespace Exercicios.Class
             return contador;
         }
 
+        public static int[] Questao24(int[] array)
+        {
+            var arrayAux = new int[array.Length];
+
+            for (int cont = 0; cont < array.Length; cont++)
+            {
+                if(array[cont] % 2 == 0)
+                {
+                    arrayAux[cont] = 1;
+                }
+                else
+                {
+                    arrayAux[cont] = -1;
+                }
+            }
+
+            return arrayAux;
+        }
+
+        public static void Questao25()
+        {
+
+        }
+
+        public static int Questao26(int[] array)
+        {
+            int maior = array[0];
+            foreach(var item in array)
+            {
+                if(item > maior)
+                {
+                    maior = item;
+                }
+            }
+
+            return maior;
+        }
+
 
     }
 }

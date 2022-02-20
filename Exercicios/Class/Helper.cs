@@ -12,7 +12,7 @@ namespace Exercicios.Class
         {
             foreach(var item in vetor)
             {
-                Console.Write($"{item} - ");
+                Console.Write($"{item} | ");
             }
 
             Console.WriteLine("");
