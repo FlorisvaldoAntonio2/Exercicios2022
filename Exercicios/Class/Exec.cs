@@ -523,6 +523,66 @@ namespace Exercicios.Class
             return maior;
         }
 
+        public static int[,] Questao27(int[,] matriz1 , int[,] matriz2)
+        {
+            //implemnetar validação se as duas matrizes tem o mesmo tamanho
 
+            var matrizAux = new int[matriz1.GetLength(0), matriz1.GetLength(1)];
+    
+            for (int l = 0; l < matriz1.GetLength(0); l++)
+            {
+                for (int c = 0; c < matriz1.GetLength(1); c++)
+                {
+                    matrizAux[l, c] = matriz1[l, c] + matriz2[l, c];
+                }
+            }
+
+            return matrizAux;
+        }
+
+        public static int Questao28(int[,] matriz)
+        {
+            int total = 0;
+            for (int l = 0; l < matriz.GetLength(0); l++)
+            {
+                for (int c = 0; c < matriz.GetLength(1); c++)
+                {
+                    if(l == c)
+                    {
+                        total += matriz[l, c];
+                    }
+                }
+            }
+
+            return total;
+        }
+
+        public static void Questao29()
+        {
+
+        }
+
+        public static void Questao30()
+        {
+
+        }
+
+        public static int[] Questao31(int[] array)
+        {
+            var arrayAux = new int[array.Length];
+            for(int cont = 0; cont < array.Length; cont++)
+            {
+                if(array[cont] < 0)
+                {
+                    arrayAux[cont] = 1;
+                }
+                else
+                {
+                    arrayAux[cont] = array[cont];
+                }
+            }
+
+            return arrayAux;
+        }
     }
 }
