@@ -15,11 +15,11 @@ namespace Exercicios.Class
     }
     public static class Exec
     {
-        public static void Questao01(float nota1 , float nota2 , float nota3)
+        public static void Questao01(float nota1, float nota2, float nota3)
         {
             float media = ((nota1 + nota2 + nota3) / 3);
 
-            if(media >= 6)
+            if (media >= 6)
             {
                 Console.WriteLine($"Aprovado, media : {media.ToString("n2")}");
             }
@@ -36,18 +36,18 @@ namespace Exercicios.Class
             {
                 throw new ArgumentException("Idade invalida deve ser MAIOR que ZERO e menor que 120!!!");
             }
-            else if(idade < 5)
+            else if (idade < 5)
             {
                 Console.WriteLine("Sem Faixa!!!");
                 return;
             }
 
 
-            if(idade >= 5 && idade <= 7)
+            if (idade >= 5 && idade <= 7)
             {
                 Console.WriteLine("Infantil A");
             }
-            else if(idade >= 8 && idade <= 10)
+            else if (idade >= 8 && idade <= 10)
             {
                 Console.WriteLine("Infantil B");
             }
@@ -85,7 +85,7 @@ namespace Exercicios.Class
         public static void Questao04(int numero)
         {
             string resultado = "";
-            if(numero % 2 == 0)
+            if (numero % 2 == 0)
             {
                 resultado += "PAR - ";
             }
@@ -94,7 +94,7 @@ namespace Exercicios.Class
                 resultado += "IMPAR - ";
             }
 
-            if(numero >= 0)
+            if (numero >= 0)
             {
                 resultado += "POSITIVO";
             }
@@ -109,9 +109,9 @@ namespace Exercicios.Class
         public static void Questao05()
         {
             int cont = 0;
-            while(cont <= 100)
+            while (cont <= 100)
             {
-                if(cont % 2 == 0)
+                if (cont % 2 == 0)
                 {
                     Console.WriteLine(cont);
                 }
@@ -144,7 +144,7 @@ namespace Exercicios.Class
 
             while (cont < 100)
             {
-                if(cont == 0 || cont == 1)
+                if (cont == 0 || cont == 1)
                 {
                     seq[cont] = cont;
                     cont++;
@@ -154,14 +154,14 @@ namespace Exercicios.Class
                 seq[cont] = seq[cont - 2] + seq[cont - 1];
 
                 cont++;
-                    
+
             }
 
-            foreach(var num in seq)
+            foreach (var num in seq)
             {
                 Console.WriteLine($"{num} - ");
             }
-            
+
         }
 
         public static void Questao07(int numero)
@@ -207,7 +207,7 @@ namespace Exercicios.Class
 
                 cont++;
 
-            } while (cont < 100) ;
+            } while (cont < 100);
 
             foreach (var num in seq)
             {
@@ -220,15 +220,15 @@ namespace Exercicios.Class
             int NumeroDivisiveis = 0;
             for (int cont = 1; cont <= 150; cont++)
             {
-                for(int num = cont; num >= 1; num--)
+                for (int num = cont; num >= 1; num--)
                 {
-                    if(cont % num == 0)
+                    if (cont % num == 0)
                     {
                         NumeroDivisiveis++;
                     }
                 }
 
-                if(NumeroDivisiveis <= 2)
+                if (NumeroDivisiveis <= 2)
                 {
                     Console.WriteLine(cont);
                 }
@@ -262,7 +262,7 @@ namespace Exercicios.Class
         {
             for (int cont = 1; cont <= 10; cont++)
             {
-                for(int t = 1; t <= 10; t++)
+                for (int t = 1; t <= 10; t++)
                 {
                     Console.WriteLine($"{cont} X {t} = {cont * t}");
                 }
@@ -273,14 +273,14 @@ namespace Exercicios.Class
 
         public static double Questao13(int numero)
         {
-            if(numero < 1)
+            if (numero < 1)
             {
                 throw new ArgumentException("Parametro invalido!! O Numero deve ser POSITIVO e diferente de ZERO!!");
             }
 
             double resultado = 1.00; // ou 1d 
 
-            for(int cont = 2; cont <= numero; cont++)
+            for (int cont = 2; cont <= numero; cont++)
             {
                 resultado += 1.00 / cont; // ou (double)1 / cont
             }
@@ -295,11 +295,12 @@ namespace Exercicios.Class
 
         public static float Questao15(float grau)
         {
-            return ((9  * grau + 160) / 5);
+            return ((9 * grau + 160) / 5);
         }
+
         public static double Questao16(float raio, float altura)
         {
-            if(raio < 0 || altura < 0)
+            if (raio < 0 || altura < 0)
             {
                 throw new ArgumentException("O raio e a altura devem ser POSITIVOS!!!");
             }
@@ -308,18 +309,18 @@ namespace Exercicios.Class
 
         public static void Questao17(float ladoA, float ladoB, float ladoC)
         {
-            if(ladoA < 0 || ladoB < 0 || ladoC < 0)
+            if (ladoA < 0 || ladoB < 0 || ladoC < 0)
             {
                 throw new ArgumentException("Os lados devem ser POSITIVOS!!!");
             }
 
-            if(ladoA + ladoB >= ladoC && ladoA + ladoC >= ladoB && ladoB + ladoC >= ladoA)
+            if (ladoA + ladoB >= ladoC && ladoA + ladoC >= ladoB && ladoB + ladoC >= ladoA)
             {
-                if(ladoA == ladoB && ladoB == ladoC)
+                if (ladoA == ladoB && ladoB == ladoC)
                 {
                     Console.WriteLine("triângulo é eqüilátero");
                 }
-                else if(ladoA == ladoB || ladoA == ladoC || ladoB == ladoC)
+                else if (ladoA == ladoB || ladoA == ladoC || ladoB == ladoC)
                 {
                     Console.WriteLine("triângulo é isósceles");
                 }
@@ -336,7 +337,7 @@ namespace Exercicios.Class
 
         public static string Questao18(int mes)
         {
-            var Meses = new string[] 
+            var Meses = new string[]
             {
                 "Janeiro",
                 "Fevereiro",
@@ -353,14 +354,14 @@ namespace Exercicios.Class
             };
 
             return Meses[mes - 1];
-         
+
         }
 
-        public static int Questao19(int numero1, int numero2 , Operacao op)
+        public static int Questao19(int numero1, int numero2, Operacao op)
         {
             int retorno = 0;
 
-            if(op == Operacao.Soma)
+            if (op == Operacao.Soma)
                 retorno = numero1 + numero2;
 
             if (op == Operacao.Subtracao)
@@ -375,5 +376,115 @@ namespace Exercicios.Class
             return retorno;
 
         }
+
+        public static void Questao20(char letra)
+        {
+            if (letra == 'x' || letra == 'X')
+            {
+                Console.WriteLine("Sexo não informado");
+                return;
+            }
+            else if (letra == 'm' || letra == 'M')
+            {
+                Console.WriteLine("Masculino");
+                return;
+            }
+            else if (letra == 'f' || letra == 'F')
+            {
+                Console.WriteLine("Feminino");
+                return;
+            }
+
+        }
+
+        public static void Questao21()
+        {
+            var seqA = new int[10];
+            //A
+            for (int c = 0 , cont = 10; c < 10; c++)
+            {
+                seqA[c] = cont - c;           
+            }
+
+            var seqB = new int[10];
+            //B
+            for (int c = 0, cont = 10; c < 10; c++)
+            {
+                if (c == 0)
+                {
+                    seqB[c] = 1;
+                    continue;
+                }
+
+                if(c < 5)
+                {
+                    seqB[c] = seqB[c - 1] + 1;
+                    continue;
+                }
+
+                seqB[c] = seqB[c - 5] * 10;
+                
+            }
+
+            var seqC = new int[10];
+            //C
+            for (int c = 0; c < 10; c++)
+            {
+                if(c == 0)
+                {
+                    seqC[c] = 1;
+                    continue;
+                }
+                seqC[c] = seqC[c - 1] + 2;
+            }
+
+            var seqD = new int[10];
+
+            //D
+            for (int c = 0; c < 10; c++)
+            {
+                if(c == 0)
+                {
+                    seqD[c] = 2;
+                    continue;
+                }
+                
+                seqD[c] = seqD[(c - 1)] * 2;
+            }
+
+            Helper.ExibirArray<int>(seqA);
+            Helper.ExibirArray<int>(seqB);
+            Helper.ExibirArray<int>(seqC);
+            Helper.ExibirArray<int>(seqD);
+        }
+
+        public static int Questao22(int[] array)
+        {
+            int contador = 0;
+            foreach(var item in array)
+            {
+                if(item < 0)
+                {
+                    contador++;
+                }
+            }
+
+            return contador;
+        }
+
+        public static int Questao23(int[] array, int x)
+        {
+            int contador = 0;
+            foreach(var num in array)
+            {
+                if(num == x)
+                {
+                    contador++;
+                }
+            }
+            return contador;
+        }
+
+
     }
 }

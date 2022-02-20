@@ -49,8 +49,15 @@ namespace Exercicios
 
                 //Console.WriteLine($"O mês escolhido é : {Exec.Questao18(1)}");
 
-                Console.WriteLine($"Total : {Exec.Questao19(10 , 2 , Operacao.Divisao )}");
+                // Console.WriteLine($"Total : {Exec.Questao19(10 , 2 , Operacao.Divisao )}");
 
+                //Exec.Questao20('x');
+
+                //Exec.Questao21();
+
+                //Console.WriteLine(Exec.Questao22(new int[] {0 , -45 , -1 , 10}));
+
+                Console.WriteLine(Exec.Questao23(new int[] { 12 , 10, -45, -1, 10 , 10 } , 10));
             }
             catch (ArgumentException ex)
             {
