@@ -584,5 +584,38 @@ namespace Exercicios.Class
 
             return arrayAux;
         }
+
+        public static void Questao32(int numeroJogadas)
+        {
+            var random = new Random();
+
+            var jogadas = new Dictionary<int, int>() { 
+                                                        { 1, 0 },
+                                                        { 2, 0 },
+                                                        { 3, 0 },
+                                                        { 4, 0 },
+                                                        { 5, 0 },
+                                                        { 6, 0 }
+                                                      };
+
+            int numeroSorteado;
+
+            for(int cont = 0; cont < numeroJogadas; cont++)
+            {
+                numeroSorteado = random.Next(1, 7);
+
+                Console.WriteLine(numeroSorteado);
+
+                jogadas[numeroSorteado]++;
+            }
+
+            foreach (var item in jogadas)
+            {
+                Console.WriteLine("Face: {0}, Quantidade: {1}", item.Key, item.Value);
+            }
+
+
+
+        }
     }
 }

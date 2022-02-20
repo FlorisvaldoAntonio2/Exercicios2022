@@ -86,6 +86,8 @@ namespace Exercicios
 
                 //Helper.ExibirArray(Exec.Questao31(new int[] { 10, -1, -4, -7, -1 }));
 
+                Exec.Questao32(100);
+
             }
             catch (ArgumentException ex)
             {
