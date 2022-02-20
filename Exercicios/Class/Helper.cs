@@ -17,5 +17,18 @@ namespace Exercicios.Class
 
             Console.WriteLine("");
         }
+
+        public static void ExibirMatriz<T>(T[,] matriz)
+        {
+            for(int l = 0; l < matriz.GetLength(0); l++)
+            {
+                for (int c = 0; c < matriz.GetLength(1); c++)
+                {
+                    Console.Write($"{matriz[l , c]} | ");
+                }
+
+                Console.WriteLine();
+            }
+        }
     }
 }

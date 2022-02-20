@@ -62,6 +62,9 @@ namespace Exercicios
                 //Helper.ExibirArray(Exec.Questao24(new int[] {10 , -1 , -4 , -7 , -1}));
 
                 Console.WriteLine(Exec.Questao26(new int[] {10 , 15 , 300 , 58 , 2940}));
+
+                Helper.ExibirMatriz(new int[,] { { 12 , 12 , 45 } , { 1 , 41 , 80} } );
+
             }
             catch (ArgumentException ex)
             {
