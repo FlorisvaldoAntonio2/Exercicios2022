@@ -408,7 +408,7 @@ namespace Exercicios.Class
 
             var seqB = new int[10];
             //B
-            for (int c = 0, cont = 10; c < 10; c++)
+            for (int c = 0; c < 10; c++)
             {
                 if (c == 0)
                 {
@@ -616,6 +616,94 @@ namespace Exercicios.Class
 
 
 
+        }
+
+        public static void Questao33()
+        {
+
+        }
+
+        public static float Questao34(int[]array1 , int[]array2)
+        {
+            float total = 0;
+            if(array1.Length != array2.Length)
+            {
+                throw new ArgumentException("Parametro invalido!!!, ambos os arrays devem ter o mesmo tamanho!!!");
+            }
+
+            for(int c = 0; c < array1.Length; c++)
+            {
+                total += array1[c] * array2[c];
+            }
+
+            return total;
+        }
+
+        public static void Questao35(int[,] matriz)
+        {
+            var matrizAux = new int[matriz.GetLength(0) , matriz.GetLength(1)];
+
+            for(int l = 0; l < matriz.GetLength(0); l++)
+            {
+                for (int c = 0; c < matriz.GetLength(1); c++)
+                {
+                    if(matriz[l , c] < 0)
+                    {
+                        matrizAux[l , c] = 0;
+                    }
+                    else
+                    {
+                        matrizAux[l, c] = matriz[l , c];
+                    }
+                }
+            }
+            Helper.ExibirMatriz(matriz);
+            Helper.ExibirMatriz(matrizAux);
+        }
+
+        public static int[] Questao36(int[,] matriz)
+        {
+            var vetor = new int[matriz.GetLength(1)];
+            float total = 0;
+
+            for (int l = 0; l < matriz.GetLength(0); l++)
+            {
+                for (int c = 0; c < matriz.GetLength(1); c++)
+                {
+                    if(l == c)
+                    {
+                        vetor[l] = matriz[l, c];
+                    }
+                }
+            }
+
+            foreach(var num in vetor)
+            {
+                total += num;
+            }
+
+            Console.WriteLine($"Soma diagonal principal: {total}");
+            return vetor;
+        }
+
+        public static int[,] Questao37(int[,] matriz1 , int[,] matriz2)
+        {
+            if(matriz1.GetLength(0) != matriz2.GetLength(0) ||
+                    matriz1.GetLength(1) != matriz2.GetLength(1))
+            {
+                throw new ArgumentException("Ambas as matrizes devem ter as mesmas dimensões!");
+            }
+            var matrizAux = new int[matriz1.GetLength(0) , matriz1 .GetLength(1)];
+
+            for(int l = 0;l < matriz1.GetLength(0); l++)
+            {
+                for(int c = 0; c < matriz1.GetLength(1); c++)
+                {
+                    matrizAux[l, c] = matriz1[l, c] + matriz2[l, c];
+                }
+            }
+
+            return matrizAux;
         }
     }
 }

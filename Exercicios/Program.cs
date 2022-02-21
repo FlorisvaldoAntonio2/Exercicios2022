@@ -86,9 +86,42 @@ namespace Exercicios
 
                 //Helper.ExibirArray(Exec.Questao31(new int[] { 10, -1, -4, -7, -1 }));
 
-                Exec.Questao32(100);
+                //Exec.Questao32(100);
 
-            }
+                Exec.Questao33(); //-->falta
+
+                //Console.WriteLine(Exec.Questao34(
+                //                        new int[] { 0, 3, 5, 6 } ,
+                //                        new int[] { 2, 4, 9, 8 }
+                //                  ));
+
+                //Exec.Questao35(new int[,] { 
+                //                            { 10 , 10 , 10 } ,
+                //                            { 10 , -15 , 10 } ,
+                //                            { 10 , -1 , 10 } ,
+                //                            { 10 , 10 , 10 }
+                //});
+
+                //Exec.Questao36(new int[,]{
+                //                            { 10 , 10 , 10 } ,
+                //                            { 10 , 150 , 10 } ,
+                //                            { 10 , 1 , 10 }
+                // });
+
+                //Helper.ExibirMatriz( Exec.Questao37(
+                //                new int[,] {
+                //                    {1, 2, 3},
+                //                    {4, 5, 6}
+                //                } ,
+                //                new int[,] {
+                //                    {1, 2, 3},
+                //                    {4, 5, 6}
+                //                }
+                //));
+
+
+
+                }
             catch (ArgumentException ex)
             {
                 Console.WriteLine(ex.Message);
