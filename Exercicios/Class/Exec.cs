@@ -705,5 +705,20 @@ namespace Exercicios.Class
 
             return matrizAux;
         }
+
+        public static bool Questao38(string texto1 , string texto2)
+        {
+            if(texto1 == texto2)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public static void Questao39(int numero)
+        {
+
+        }
     }
 }

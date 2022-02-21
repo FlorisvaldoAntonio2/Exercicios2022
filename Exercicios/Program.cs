@@ -119,6 +119,7 @@ namespace Exercicios
                 //                }
                 //));
 
+                //Console.WriteLine(Exec.Questao38("Florisvaldo", "Florisvaldo"));
 
 
                 }
