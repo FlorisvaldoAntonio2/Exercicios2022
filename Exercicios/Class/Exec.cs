@@ -720,7 +720,7 @@ namespace Exercicios.Class
         {
 
         }
-        public static string Questao45(string frase)
+        public static string Questao45(string frase ,int numCasasSeguintes)
         {
             var alfa = new char[] { 'A' , 'B', 'C', 'D', 'E', 'F', 'G', 'H',
                                     'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 
@@ -737,8 +737,8 @@ namespace Exercicios.Class
                     novaFrase += ' ';
                     continue;
                 }
-                int numLetra = Array.IndexOf(alfa, fraseMaiuscula[l]);
-                novaFrase += alfa[ numLetra + 3 ];
+                int IndexLetra = Array.IndexOf(alfa, fraseMaiuscula[l]);
+                novaFrase += alfa[ IndexLetra + numCasasSeguintes ];
             }
 
             return novaFrase;

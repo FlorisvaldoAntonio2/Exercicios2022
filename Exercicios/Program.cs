@@ -121,7 +121,7 @@ namespace Exercicios
 
                 //Console.WriteLine(Exec.Questao38("Florisvaldo", "Florisvaldo"));
 
-                Console.WriteLine(Exec.Questao45("a ligeira raposa marrom saltou sobre o cachorro cansado"));
+                Console.WriteLine(Exec.Questao45("a ligeira raposa marrom saltou sobre o cachorro cansado" , 3));
 
 
             }
