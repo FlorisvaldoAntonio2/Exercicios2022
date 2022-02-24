@@ -720,6 +720,47 @@ namespace Exercicios.Class
         {
 
         }
+
+        public static bool Questao44(string frase)
+        {
+            Console.WriteLine(InverteFrase(RetirarEspacos(frase)));
+            Console.WriteLine(RetirarEspacos(frase));
+
+            if(InverteFrase(RetirarEspacos(frase)) == RetirarEspacos(frase))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private static string InverteFrase(string frase)
+        {
+            string fraseInversa = "";
+
+            for (int l = frase.Length - 1; l >= 0; l--)
+            {
+                fraseInversa += frase[l];
+            }
+
+            return fraseInversa;
+        }
+
+        private static string RetirarEspacos(string frase)
+        {
+            string fraseSemEspaco = "";
+
+            for (int l = 0; l < frase.Length; l++)
+            {
+                if (frase[l] != ' ')
+                {
+                    fraseSemEspaco += frase[l];
+                }
+            }
+
+            return fraseSemEspaco;
+        }
+
         public static string Questao45(string frase ,int numCasasSeguintes)
         {
             var alfa = new char[] { 'A' , 'B', 'C', 'D', 'E', 'F', 'G', 'H',
