@@ -720,5 +720,29 @@ namespace Exercicios.Class
         {
 
         }
+        public static string Questao45(string frase)
+        {
+            var alfa = new char[] { 'A' , 'B', 'C', 'D', 'E', 'F', 'G', 'H',
+                                    'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 
+                                    'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 
+                                    'Y', 'Z'};
+
+            string fraseMaiuscula = frase.ToUpper();
+            string novaFrase = "";
+
+            for(int l = 0; l < fraseMaiuscula.Length; l++)
+            {
+                if(fraseMaiuscula[l] == ' ')
+                {
+                    novaFrase += ' ';
+                    continue;
+                }
+                int numLetra = Array.IndexOf(alfa, fraseMaiuscula[l]);
+                novaFrase += alfa[ numLetra + 3 ];
+            }
+
+            return novaFrase;
+            
+        }
     }
 }
