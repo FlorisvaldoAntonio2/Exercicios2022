@@ -718,15 +718,38 @@ namespace Exercicios.Class
 
         public static void Questao39(int numero)
         {
+               
+        }
+
+        public static void Questao43(string frase)
+        {
+            int numeroEspacos = 0;
+            int numeroVogais = 0;
+            var vogais = new char[] { 'A', 'Á', 'À', 'Ã', 'Â','E', 'É', 'I', 'Í', 'O' ,'Õ' , 'Ô', 'U' };
+            string fraseMaiuscula = frase.ToUpper();
+
+            for(int l = 0; l < frase.Length; l++)
+            {
+                if(fraseMaiuscula[l] == ' ')
+                {
+                    numeroEspacos++;
+                }
+                else if( vogais.Contains(fraseMaiuscula[l]) )
+                {
+                    numeroVogais++;
+                }
+            }
+
+            Console.WriteLine($"Total de espaços em branco: {numeroEspacos} \nTotal de Vogais: {numeroVogais}");
 
         }
 
         public static bool Questao44(string frase)
         {
             Console.WriteLine(InverteFrase(RetirarEspacos(frase)));
-            Console.WriteLine(RetirarEspacos(frase));
+            Console.WriteLine(RetirarEspacos(frase)); 
 
-            if(InverteFrase(RetirarEspacos(frase)) == RetirarEspacos(frase))
+            if(InverteFrase(RetirarEspacos(frase)).Equals( RetirarEspacos(frase) ))
             {
                 return true;
             }
