@@ -289,7 +289,24 @@ namespace Exercicios.Class
 
         public static void Questao14()
         {
+            double pi = 4;
+            bool soma = false;
+            for(int c = 0, num = 3; c < 1000; c++ , num+=2)
+            {
+                if (soma)
+                {
+                    soma = !soma;
+                    pi += (double)4 / num;
+                }
+                else
+                {
+                    soma = !soma;
+                    pi -= (double)4 / num;
+                }
+                    
+            }
 
+            Console.WriteLine(pi.ToString("n2"));
         }
 
         public static float Questao15(float grau)

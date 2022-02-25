@@ -39,7 +39,7 @@ namespace Exercicios
 
                 //Console.WriteLine(Exec.Questao13(-2));
 
-                Exec.Questao14(); //-->falta
+                Exec.Questao14();
 
                 //Console.WriteLine(Exec.Questao15(-20));
 
@@ -123,7 +123,7 @@ namespace Exercicios
 
                 //Console.WriteLine(Exec.Questao40("Florisvaldo"));
 
-                Console.WriteLine(Exec.Questao41("10.01.2020"));
+                //Console.WriteLine(Exec.Questao41("10.01.2020"));
 
                 //Console.WriteLine(Exec.Questao42("Florisvaldo da Silva Melo")); --> falta implementar
 
