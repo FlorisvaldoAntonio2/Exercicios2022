@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace Exercicios.Class
 {
@@ -401,9 +400,9 @@ namespace Exercicios.Class
         {
             var seqA = new int[10];
             //A
-            for (int c = 0 , cont = 10; c < 10; c++)
+            for (int c = 0, cont = 10; c < 10; c++)
             {
-                seqA[c] = cont - c;           
+                seqA[c] = cont - c;
             }
 
             var seqB = new int[10];
@@ -416,21 +415,21 @@ namespace Exercicios.Class
                     continue;
                 }
 
-                if(c < 5)
+                if (c < 5)
                 {
                     seqB[c] = seqB[c - 1] + 1;
                     continue;
                 }
 
                 seqB[c] = seqB[c - 5] * 10;
-                
+
             }
 
             var seqC = new int[10];
             //C
             for (int c = 0; c < 10; c++)
             {
-                if(c == 0)
+                if (c == 0)
                 {
                     seqC[c] = 1;
                     continue;
@@ -443,12 +442,12 @@ namespace Exercicios.Class
             //D
             for (int c = 0; c < 10; c++)
             {
-                if(c == 0)
+                if (c == 0)
                 {
                     seqD[c] = 2;
                     continue;
                 }
-                
+
                 seqD[c] = seqD[(c - 1)] * 2;
             }
 
@@ -461,9 +460,9 @@ namespace Exercicios.Class
         public static int Questao22(int[] array)
         {
             int contador = 0;
-            foreach(var item in array)
+            foreach (var item in array)
             {
-                if(item < 0)
+                if (item < 0)
                 {
                     contador++;
                 }
@@ -475,9 +474,9 @@ namespace Exercicios.Class
         public static int Questao23(int[] array, int x)
         {
             int contador = 0;
-            foreach(var num in array)
+            foreach (var num in array)
             {
-                if(num == x)
+                if (num == x)
                 {
                     contador++;
                 }
@@ -491,7 +490,7 @@ namespace Exercicios.Class
 
             for (int cont = 0; cont < array.Length; cont++)
             {
-                if(array[cont] % 2 == 0)
+                if (array[cont] % 2 == 0)
                 {
                     arrayAux[cont] = 1;
                 }
@@ -512,9 +511,9 @@ namespace Exercicios.Class
         public static int Questao26(int[] array)
         {
             int maior = array[0];
-            foreach(var item in array)
+            foreach (var item in array)
             {
-                if(item > maior)
+                if (item > maior)
                 {
                     maior = item;
                 }
@@ -523,12 +522,12 @@ namespace Exercicios.Class
             return maior;
         }
 
-        public static int[,] Questao27(int[,] matriz1 , int[,] matriz2)
+        public static int[,] Questao27(int[,] matriz1, int[,] matriz2)
         {
             //implemnetar validação se as duas matrizes tem o mesmo tamanho
 
             var matrizAux = new int[matriz1.GetLength(0), matriz1.GetLength(1)];
-    
+
             for (int l = 0; l < matriz1.GetLength(0); l++)
             {
                 for (int c = 0; c < matriz1.GetLength(1); c++)
@@ -547,7 +546,7 @@ namespace Exercicios.Class
             {
                 for (int c = 0; c < matriz.GetLength(1); c++)
                 {
-                    if(l == c)
+                    if (l == c)
                     {
                         total += matriz[l, c];
                     }
@@ -570,9 +569,9 @@ namespace Exercicios.Class
         public static int[] Questao31(int[] array)
         {
             var arrayAux = new int[array.Length];
-            for(int cont = 0; cont < array.Length; cont++)
+            for (int cont = 0; cont < array.Length; cont++)
             {
-                if(array[cont] < 0)
+                if (array[cont] < 0)
                 {
                     arrayAux[cont] = 1;
                 }
@@ -589,7 +588,7 @@ namespace Exercicios.Class
         {
             var random = new Random();
 
-            var jogadas = new Dictionary<int, int>() { 
+            var jogadas = new Dictionary<int, int>() {
                                                         { 1, 0 },
                                                         { 2, 0 },
                                                         { 3, 0 },
@@ -600,7 +599,7 @@ namespace Exercicios.Class
 
             int numeroSorteado;
 
-            for(int cont = 0; cont < numeroJogadas; cont++)
+            for (int cont = 0; cont < numeroJogadas; cont++)
             {
                 numeroSorteado = random.Next(1, 7);
 
@@ -623,15 +622,15 @@ namespace Exercicios.Class
 
         }
 
-        public static float Questao34(int[]array1 , int[]array2)
+        public static float Questao34(int[] array1, int[] array2)
         {
             float total = 0;
-            if(array1.Length != array2.Length)
+            if (array1.Length != array2.Length)
             {
                 throw new ArgumentException("Parametro invalido!!!, ambos os arrays devem ter o mesmo tamanho!!!");
             }
 
-            for(int c = 0; c < array1.Length; c++)
+            for (int c = 0; c < array1.Length; c++)
             {
                 total += array1[c] * array2[c];
             }
@@ -641,19 +640,19 @@ namespace Exercicios.Class
 
         public static void Questao35(int[,] matriz)
         {
-            var matrizAux = new int[matriz.GetLength(0) , matriz.GetLength(1)];
+            var matrizAux = new int[matriz.GetLength(0), matriz.GetLength(1)];
 
-            for(int l = 0; l < matriz.GetLength(0); l++)
+            for (int l = 0; l < matriz.GetLength(0); l++)
             {
                 for (int c = 0; c < matriz.GetLength(1); c++)
                 {
-                    if(matriz[l , c] < 0)
+                    if (matriz[l, c] < 0)
                     {
-                        matrizAux[l , c] = 0;
+                        matrizAux[l, c] = 0;
                     }
                     else
                     {
-                        matrizAux[l, c] = matriz[l , c];
+                        matrizAux[l, c] = matriz[l, c];
                     }
                 }
             }
@@ -670,14 +669,14 @@ namespace Exercicios.Class
             {
                 for (int c = 0; c < matriz.GetLength(1); c++)
                 {
-                    if(l == c)
+                    if (l == c)
                     {
                         vetor[l] = matriz[l, c];
                     }
                 }
             }
 
-            foreach(var num in vetor)
+            foreach (var num in vetor)
             {
                 total += num;
             }
@@ -686,18 +685,18 @@ namespace Exercicios.Class
             return vetor;
         }
 
-        public static int[,] Questao37(int[,] matriz1 , int[,] matriz2)
+        public static int[,] Questao37(int[,] matriz1, int[,] matriz2)
         {
-            if(matriz1.GetLength(0) != matriz2.GetLength(0) ||
+            if (matriz1.GetLength(0) != matriz2.GetLength(0) ||
                     matriz1.GetLength(1) != matriz2.GetLength(1))
             {
                 throw new ArgumentException("Ambas as matrizes devem ter as mesmas dimensões!");
             }
-            var matrizAux = new int[matriz1.GetLength(0) , matriz1 .GetLength(1)];
+            var matrizAux = new int[matriz1.GetLength(0), matriz1.GetLength(1)];
 
-            for(int l = 0;l < matriz1.GetLength(0); l++)
+            for (int l = 0; l < matriz1.GetLength(0); l++)
             {
-                for(int c = 0; c < matriz1.GetLength(1); c++)
+                for (int c = 0; c < matriz1.GetLength(1); c++)
                 {
                     matrizAux[l, c] = matriz1[l, c] + matriz2[l, c];
                 }
@@ -706,9 +705,9 @@ namespace Exercicios.Class
             return matrizAux;
         }
 
-        public static bool Questao38(string texto1 , string texto2)
+        public static bool Questao38(string texto1, string texto2)
         {
-            if(texto1 == texto2)
+            if (texto1 == texto2)
             {
                 return true;
             }
@@ -718,23 +717,97 @@ namespace Exercicios.Class
 
         public static void Questao39(int numero)
         {
-               
+
+        }
+
+        public static string Questao40(string nome)
+        {
+            return InverteFrase(nome).ToUpper();
+        }
+
+        public static string Questao41(string data)
+        {
+            Regex regex = new Regex(@"[0-9]{2}(\-|\/|\.)[0-9]{2}(\-|\/|\.)[0-9]{4}");
+            Match match = regex.Match(data);
+
+            if (match.Success)
+            {
+                var Meses = new string[]
+                    {
+                        "Janeiro",
+                        "Fevereiro",
+                        "Maio",
+                        "Abril",
+                        "Marco",
+                        "Junho",
+                        "Julho",
+                        "Agosto",
+                        "Setembro",
+                        "Outubro",
+                        "Novembro",
+                        "Dezembro"
+                    };
+                var dataDividida = data.Split('/' , '-' , '.');
+
+                return $"{dataDividida[0]} de {Meses[int.Parse(dataDividida[1]) - 1]} de {dataDividida[2]}";
+            }
+
+            return "ERRO, data no formato invalido!";
+            
+        }
+
+        //falta implementar
+        public static string Questao42(string nomeCompleto)
+        {
+            string iniciais = "";
+
+            for (int l = 0; l < nomeCompleto.Length; l++)
+            {
+                if (l == 0)
+                {
+                    iniciais += nomeCompleto[l];
+                    continue;
+                }
+
+                if (nomeCompleto[l] == ' ')
+                {
+                    for (int s = l + 1; s < nomeCompleto.Length; s++)
+                    {
+                        if (nomeCompleto[s] == ' ')
+                        {
+                            if (Math.Abs(s - l) > 3)
+                            {
+                                iniciais += nomeCompleto[l + 1];
+                                
+                            }
+                            break;
+                        }
+                        else if(nomeCompleto.Length == s)
+                        {
+                            iniciais += nomeCompleto[l + 1];
+                            break;
+                        }
+                    }
+                }
+            }
+
+            return iniciais.ToUpper();
         }
 
         public static void Questao43(string frase)
         {
             int numeroEspacos = 0;
             int numeroVogais = 0;
-            var vogais = new char[] { 'A', 'Á', 'À', 'Ã', 'Â','E', 'É', 'I', 'Í', 'O' ,'Õ' , 'Ô', 'U' };
+            var vogais = new char[] { 'A', 'Á', 'À', 'Ã', 'Â', 'E', 'É', 'I', 'Í', 'O', 'Õ', 'Ô', 'U' };
             string fraseMaiuscula = frase.ToUpper();
 
-            for(int l = 0; l < frase.Length; l++)
+            for (int l = 0; l < frase.Length; l++)
             {
-                if(fraseMaiuscula[l] == ' ')
+                if (fraseMaiuscula[l] == ' ')
                 {
                     numeroEspacos++;
                 }
-                else if( vogais.Contains(fraseMaiuscula[l]) )
+                else if (vogais.Contains(fraseMaiuscula[l]))
                 {
                     numeroVogais++;
                 }
@@ -747,9 +820,9 @@ namespace Exercicios.Class
         public static bool Questao44(string frase)
         {
             Console.WriteLine(InverteFrase(RetirarEspacos(frase)));
-            Console.WriteLine(RetirarEspacos(frase)); 
+            Console.WriteLine(RetirarEspacos(frase));
 
-            if(InverteFrase(RetirarEspacos(frase)).Equals( RetirarEspacos(frase) ))
+            if (InverteFrase(RetirarEspacos(frase)).Equals(RetirarEspacos(frase)))
             {
                 return true;
             }
@@ -784,29 +857,29 @@ namespace Exercicios.Class
             return fraseSemEspaco;
         }
 
-        public static string Questao45(string frase ,int numCasasSeguintes)
+        public static string Questao45(string frase, int numCasasSeguintes)
         {
             var alfa = new char[] { 'A' , 'B', 'C', 'D', 'E', 'F', 'G', 'H',
-                                    'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 
-                                    'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 
+                                    'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+                                    'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
                                     'Y', 'Z'};
 
             string fraseMaiuscula = frase.ToUpper();
             string novaFrase = "";
 
-            for(int l = 0; l < fraseMaiuscula.Length; l++)
+            for (int l = 0; l < fraseMaiuscula.Length; l++)
             {
-                if(fraseMaiuscula[l] == ' ')
+                if (fraseMaiuscula[l] == ' ')
                 {
                     novaFrase += ' ';
                     continue;
                 }
                 int IndexLetra = Array.IndexOf(alfa, fraseMaiuscula[l]);
-                novaFrase += alfa[ IndexLetra + numCasasSeguintes ];
+                novaFrase += alfa[IndexLetra + numCasasSeguintes];
             }
 
             return novaFrase;
-            
+
         }
     }
 }

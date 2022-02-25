@@ -121,7 +121,13 @@ namespace Exercicios
 
                 //Console.WriteLine(Exec.Questao38("Florisvaldo", "Florisvaldo"));
 
-                Exec.Questao43("Olá mundo!, Estou estudando C#!");
+                //Console.WriteLine(Exec.Questao40("Florisvaldo"));
+
+                Console.WriteLine(Exec.Questao41("10.01.2020"));
+
+                //Console.WriteLine(Exec.Questao42("Florisvaldo da Silva Melo")); --> falta implementar
+
+                //Exec.Questao43("Olá mundo!, Estou estudando C#!");
 
                 //Console.WriteLine(Exec.Questao44("SUBI NO ONIBUS"));
 
